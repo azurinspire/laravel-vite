@@ -15,6 +15,8 @@
         "vite": "^2.0.1"
     },
     "dependencies": {
+        "@inertiajs/inertia": "^0.8.4",
+        "@inertiajs/inertia-vue3": "^0.3.5",
         "vue": "^3.0.5"
     }
 }

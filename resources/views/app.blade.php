@@ -8,6 +8,6 @@
   @vite
 </head>
 <body class="antialiased">
-  <div id="app"></div>
+  @inertia
 </body>
 </html>

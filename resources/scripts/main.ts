@@ -9,7 +9,14 @@
 | -> https://github.com/innocenzi/laravel-vite
 */
 
-import { createApp } from 'vue'
-import App from '@/views/App.vue'
+import { createApp, h } from 'vue'
+import { App, plugin } from '@inertiajs/inertia-vue3'
 
-createApp(App).mount('#app')
+const el = document.getElementById('app')
+
+createApp({
+    render: () => h(App, {
+      initialPage: JSON.parse(el.dataset.page),
+      resolveComponent: name => import(`../views/${name}.vue`),
+    })
+  }).use(plugin).mount(el)
